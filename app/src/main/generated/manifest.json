@@ -1,0 +1,21 @@
+{
+  "Group": "$pluginGroup",
+  "Name": "$pluginName",
+  "Version": "$pluginVersion",
+  "Description": "$pluginDescription",
+  "Authors": [
+    {
+      "Name": "ChibiKookie",
+      "Email": "chibiblasphem@gmail.com",
+      "Url": "https://github.com/ChibiBlasphem"
+    }
+  ],
+  "Main": "$pluginMain",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "SubPlugins": []
+}
