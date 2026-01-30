@@ -16,7 +16,6 @@ public class EchoesOfMachinePlugin extends JavaPlugin {
     public void setup() {
     }
 
-
     public static EchoesOfMachinePlugin get() {
         return instance;
     }
