@@ -1,0 +1,109 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@InputLabel = Label {
+  Anchor: (Left: 6, Right: 16, Width: 250);
+  Style: (...$C.@DefaultLabelStyle, VerticalAlignment: Center, Wrap: true);
+};
+
+$C.@PageOverlay {
+  $C.@Container #Container {
+    Anchor: (Width: 500, Height: 280);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Title";
+        }
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+
+      Group #NameField {
+        LayoutMode: Top;
+        Anchor: (Bottom: 4);
+
+        Group {
+          LayoutMode: Left;
+
+          @InputLabel {
+            FlexWeight: 1;
+            Text: "Name";
+          }
+
+          $C.@TextField #Input {
+            FlexWeight: 2;
+          }
+        }
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Top: 2, Height: 20);
+
+          Group {
+            FlexWeight: 1;
+          }
+
+          Label #Error {
+            Visible: false;
+            FlexWeight: 2;
+            Style: (FontSize: 14, TextColor: #bb3333);
+            Text: "Error";
+          }
+        }
+      }
+
+      Group #ModeField {
+        LayoutMode: Left;
+        Anchor: (Bottom: 16);
+
+        @InputLabel {
+          FlexWeight: 1;
+          Text: "Mode";
+        }
+
+        $C.@DropdownBox #Input {
+          @Anchor = (Left: 0, Right: 0);
+          FlexWeight: 2;
+        }
+      }
+
+      Group #OutputConnectorField {
+        LayoutMode: Left;
+        Anchor: (Bottom: 16);
+        Visible: false;
+
+        @InputLabel {
+          FlexWeight: 1;
+          Text: "Output";
+        }
+
+        $C.@DropdownBox #Input {
+          @Anchor = (Left: 0, Right: 0);
+          FlexWeight: 2;
+        }
+      }
+
+      Group {
+        LayoutMode: Center;
+        Anchor: (Top: 8);
+
+        $C.@SecondaryTextButton #SaveButton {
+          @Sounds = $Sounds.@SaveSettings;
+          @Anchor = (Left: 4);
+          Text: "Save";
+          FlexWeight: 1;
+        }
+
+        $C.@SecondaryTextButton #CancelButton {
+          @Sounds = $Sounds.@ButtonsCancel;
+          @Anchor = (Left: 4);
+          Text: "Cancel";
+          FlexWeight: 1;
+        }
+      }
+    }
+  }
+}
