@@ -1,0 +1,43 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Kribys_Rod_Copper.name"
+  },
+  "Categories": [
+    "Items"
+  ],
+  "Recipe": {
+    "TimeSeconds": 1,
+    "OutputQuantity": 2,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "MachineBench",
+        "Categories": [
+          "Materials"
+        ]
+      }
+    ]
+  },
+  "Model": "Resources/Materials/Kribys_Rod.blockymodel",
+  "Texture": "Resources/Materials/Rods/Kribys_Copper_Texture.png",
+  "DropOnDeath": true,
+  "Icon": "Icons/ItemsGenerated/Kribys_Rod_Copper.png",
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      22.5,
+      284,
+      22.5
+    ],
+    "Translation": [
+      1,
+      -3
+    ]
+  }
+}

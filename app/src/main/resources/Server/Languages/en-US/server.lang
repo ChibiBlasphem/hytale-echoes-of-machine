@@ -1,2 +1,5 @@
 items.Kribys_Connector_Machine.name=Connector
 items.Kribys_Connector_Machine.description=Magically bind inputs and outputs from a machine to an other
+items.Kribys_Bench_Machine.name=Machine Bench
+items.Kribys_Bench_Machine.description=An ancient bench that uses old technology to create magic items
+items.Kribys_Rod_Copper.name=Copper Rod
