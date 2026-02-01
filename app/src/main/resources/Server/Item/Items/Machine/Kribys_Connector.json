@@ -86,7 +86,7 @@
     "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Error_Texture.png",
+        "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Error_Texture.png",
         "Weight": 1
       }
     ],
@@ -114,9 +114,10 @@
           {
             "Type": "ChangeState",
             "Changes": {
-              "default": "On",
-              "On": "Off",
-              "Off": "default"
+              "default": "Off",
+              "Off": "Emit",
+              "Emit": "Receive",
+              "Receive": "default"
             }
           }
         ]
@@ -127,16 +128,26 @@
         "Off": {
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
               "Weight": 1
             }
           ]
         },
-        "On": {
+        "Emit": {
           "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
+              "Weight": 1
+            }
+          ],
+          "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Kribys_Connector_Rotation.blockyanim"
+        },
+        "Receive": {
+          "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit.blockymodel",
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Receive_Texture.png",
               "Weight": 1
             }
           ],
