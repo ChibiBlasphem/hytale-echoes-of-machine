@@ -1,0 +1,151 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Kribys_Connector_Machine.name",
+    "Description": "server.items.Kribys_Connector_Machine.description"
+  },
+  "Icon": "Icons/ItemsGenerated/Kribys_Connector.png",
+  "IconProperties": {
+    "Scale": 1,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      9,
+      -19
+    ]
+  },
+  "InteractionConfig": {
+    "Priorities": {
+      "Secondary": {
+        "MainHand": 1,
+        "OffHand": -1
+      }
+    }
+  },
+  "Interactions": {
+    "Primary": "Root_Unarmed_Attack_Swing_Left",
+    "Secondary": "Block_Secondary"
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Tree_Sap",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 4,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Tools"
+        ],
+        "Id": "Fieldcraft"
+      },
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Survival"
+        ]
+      }
+    ]
+  },
+  "Utility": {
+    "Usable": true
+  },
+  "ResourceTypes": [
+    {
+      "Id": "Fuel"
+    },
+    {
+      "Id": "Charcoal"
+    }
+  ],
+  "Scale": 0.6,
+  "Tags": {
+    "Type": [
+      "Machine"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone",
+  "BlockType": {
+    "DrawType": "Model",
+    "BlockSoundSetId": "Crystal",
+    "Opacity": "Transparent",
+    "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Error_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "CustomModelScale": 1,
+    "PlacementSettings": {
+      "WallPlacementOverrideBlockId": "Kribys_Connector_Wall",
+      "PlaceInEmptyBlocks": true,
+      "RotationMode": "BlockNormal"
+    },
+    "Material": "Solid",
+    "Looping": true,
+    "VariantRotation": "NESW",
+    "CubeShadingMode": "Standard",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "HitboxType": "Kribys_Connector",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "ChangeState",
+            "Changes": {
+              "default": "On",
+              "On": "Off",
+              "Off": "default"
+            }
+          }
+        ]
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Off": {
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Weight": 1
+            }
+          ]
+        },
+        "On": {
+          "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit.blockymodel",
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Weight": 1
+            }
+          ],
+          "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Kribys_Connector_Rotation.blockyanim"
+        }
+      }
+    },
+    "Flags": {
+      "IsUsable": true
+    }
+  }
+}
