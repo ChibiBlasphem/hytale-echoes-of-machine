@@ -3,7 +3,7 @@
     "Name": "server.items.Kribys_Connector_Machine.name",
     "Description": "server.items.Kribys_Connector_Machine.description"
   },
-  "Icon": "Icons/ItemsGenerated/Connector.png",
+  "Icon": "Icons/ItemsGenerated/Kribys_Connector.png",
   "IconProperties": {
     "Scale": 1,
     "Rotation": [
@@ -16,17 +16,11 @@
       -19
     ]
   },
-  "InteractionConfig": {
-    "Priorities": {
-      "Secondary": {
-        "MainHand": 1,
-        "OffHand": -1
-      }
-    }
-  },
-  "Interactions": {
-    "Primary": "Root_Unarmed_Attack_Swing_Left",
-    "Secondary": "Block_Secondary"
+  "Scale": 0.6,
+  "Tags": {
+    "Type": [
+      "Machine"
+    ]
   },
   "Recipe": {
     "Input": [
@@ -61,38 +55,20 @@
       }
     ]
   },
-  "Utility": {
-    "Usable": true
-  },
-  "ResourceTypes": [
-    {
-      "Id": "Fuel"
-    },
-    {
-      "Id": "Charcoal"
-    }
-  ],
-  "Scale": 0.6,
-  "Tags": {
-    "Type": [
-      "Machine"
-    ]
-  },
   "ItemSoundSetId": "ISS_Blocks_Stone",
   "BlockType": {
     "DrawType": "Model",
     "BlockSoundSetId": "Crystal",
     "Opacity": "Transparent",
-    "CustomModel": "Resources/Blocks/Machine/Connector/Connector.blockymodel",
+    "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Wall.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Error_Texture.png",
+        "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Error_Texture.png",
         "Weight": 1
       }
     ],
     "CustomModelScale": 1,
     "PlacementSettings": {
-      "WallPlacementOverrideBlockId": "Connector_Wall",
       "PlaceInEmptyBlocks": true,
       "RotationMode": "BlockNormal"
     },
@@ -100,14 +76,21 @@
     "Looping": true,
     "VariantRotation": "NESW",
     "CubeShadingMode": "Standard",
+    "Gathering": {
+      "Soft": {
+        "ItemId": "Kribys_Connector"
+      }
+    },
     "Support": {
-      "Down": [
+      "North": [
         {
+          "MatchSelf": "Disallowed",
+          "Support": "Required",
           "FaceType": "Full"
         }
       ]
     },
-    "HitboxType": "Connector",
+    "HitboxType": "Kribys_Connector_Wall",
     "Interactions": {
       "Use": {
         "Interactions": [
@@ -127,25 +110,26 @@
         "Off": {
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
               "Weight": 1
             }
           ]
         },
         "On": {
-          "CustomModel": "Resources/Blocks/Machine/Connector/Connector_Lit.blockymodel",
+          "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit_Wall.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
               "Weight": 1
             }
           ],
-          "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Connector_Rotation.blockyanim"
+          "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Kribys_Connector_Rotation.blockyanim"
         }
       }
     },
     "Flags": {
       "IsUsable": true
     }
-  }
+  },
+  "Variant": true
 }
