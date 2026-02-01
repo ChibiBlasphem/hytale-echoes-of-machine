@@ -59,6 +59,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "Interactions": {
       "Primary": "Break_Container",
       "Use": "Open_Container"

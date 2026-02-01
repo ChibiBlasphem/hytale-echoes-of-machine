@@ -87,6 +87,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "VariantRotation": "NESW",
     "ParticleColor": "#c7b885",
     "Interactions": {

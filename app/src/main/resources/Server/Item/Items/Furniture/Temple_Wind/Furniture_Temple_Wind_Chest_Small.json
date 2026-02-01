@@ -89,6 +89,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "VariantRotation": "NESW",
     "Interactions": {
       "Primary": "Break_Container",
