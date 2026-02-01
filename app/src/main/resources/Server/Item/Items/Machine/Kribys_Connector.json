@@ -86,7 +86,7 @@
     "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Error_Texture.png",
+        "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Error_Texture.png",
         "Weight": 1
       }
     ],
@@ -128,7 +128,7 @@
         "Off": {
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
               "Weight": 1
             }
           ]
@@ -137,7 +137,7 @@
           "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
               "Weight": 1
             }
           ],
@@ -147,7 +147,7 @@
           "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector_Lit.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Resources/Blocks/Machine/Machine_Textures/Kribys_Connector_Receive_Texture.png",
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Receive_Texture.png",
               "Weight": 1
             }
           ],
