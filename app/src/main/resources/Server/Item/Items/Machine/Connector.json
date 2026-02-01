@@ -86,7 +86,7 @@
     "CustomModel": "Resources/Blocks/Machine/Connector/Connector.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Texture.png",
+        "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Error_Texture.png",
         "Weight": 1
       }
     ],
@@ -100,7 +100,6 @@
     "Looping": true,
     "VariantRotation": "NESW",
     "CubeShadingMode": "Standard",
-    "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Connector_Rotation.blockyanim",
     "Support": {
       "Down": [
         {
@@ -108,6 +107,45 @@
         }
       ]
     },
-    "HitboxType": "Connector"
+    "HitboxType": "Connector",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "ChangeState",
+            "Changes": {
+              "default": "On",
+              "On": "Off",
+              "Off": "default"
+            }
+          }
+        ]
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Off": {
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Texture.png",
+              "Weight": 1
+            }
+          ]
+        },
+        "On": {
+          "CustomModel": "Resources/Blocks/Machine/Connector/Connector_Lit.blockymodel",
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Machine_Textures/Connector_Texture.png",
+              "Weight": 1
+            }
+          ],
+          "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Connector_Rotation.blockyanim"
+        }
+      }
+    },
+    "Flags": {
+      "IsUsable": true
+    }
   }
 }
