@@ -94,6 +94,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "ParticleColor": "#63422b",
     "BlockSoundSetId": "Wood",
     "Interactions": {

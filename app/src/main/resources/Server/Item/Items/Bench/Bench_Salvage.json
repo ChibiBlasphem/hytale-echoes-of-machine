@@ -116,6 +116,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "BlockSoundSetId": "Stone",
     "Interactions": {
       "Use": "Open_Processing_Bench"

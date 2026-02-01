@@ -153,6 +153,13 @@
         }
       ]
     },
+    "Supporting": {
+      "All": [
+        {
+          "FaceType": "Connector"
+        }
+      ]
+    },
     "BlockSoundSetId": "Campfire",
     "VariantRotation": "NESW",
     "Looping": true,
