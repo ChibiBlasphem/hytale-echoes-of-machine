@@ -86,7 +86,7 @@
         {
           "MatchSelf": "Disallowed",
           "Support": "Required",
-          "FaceType": "Full"
+          "FaceType": "Connector"
         }
       ]
     },
