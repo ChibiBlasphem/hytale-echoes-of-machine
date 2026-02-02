@@ -26,7 +26,14 @@
   },
   "Interactions": {
     "Primary": "Root_Unarmed_Attack_Swing_Left",
-    "Secondary": "Block_Secondary"
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "PlaceConnector",
+          "Next": "Block_Secondary"
+        }
+      ]
+    }
   },
   "Recipe": {
     "Input": [
@@ -86,7 +93,7 @@
     "CustomModel": "Resources/Blocks/Machine/Connector/Kribys_Connector.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Error_Texture.png",
+        "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
         "Weight": 1
       }
     ],
@@ -112,13 +119,7 @@
       "Use": {
         "Interactions": [
           {
-            "Type": "ChangeState",
-            "Changes": {
-              "default": "Off",
-              "Off": "Emit",
-              "Emit": "Receive",
-              "Receive": "default"
-            }
+            "Type": "UseConnector"
           }
         ]
       }
@@ -129,6 +130,14 @@
           "CustomModelTexture": [
             {
               "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Texture.png",
+              "Weight": 1
+            }
+          ]
+        },
+        "Error": {
+          "CustomModelTexture": [
+            {
+              "Texture": "Resources/Blocks/Machine/Connector/Kribys_Connector_Error_Texture.png",
               "Weight": 1
             }
           ]
@@ -153,6 +162,11 @@
           ],
           "CustomModelAnimation": "Resources/Blocks/Machine/Connector/Kribys_Connector_Rotation.blockyanim"
         }
+      }
+    },
+    "BlockEntity": {
+      "Components": {
+        "MachineConnector": {}
       }
     },
     "Flags": {

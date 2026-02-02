@@ -1,0 +1,57 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Kribys_Connector.name"
+  },
+  "MaxStack": 100,
+  "PlayerAnimationId": "Item",
+  "Interactions": {
+    "Primary": "Root_Unarmed_Attack_Swing_Left",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Empty",
+    "Opacity": "Transparent",
+    "CustomModel": "Items/Machine/Kribys_Wall_Connector.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Machine/Kribys_Connector_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Wall_Connector",
+    "BlockEntity": {
+      "Components": {
+        "MachineConnector": {}
+      }
+    },
+    "Gathering": {
+      "Soft": {
+        "IsWeaponBreakable": false,
+        "ItemId": "Kribys_Connector"
+      }
+    },
+    "PlacementSettings": {
+      "AllowRotationKey": false,
+      "PlaceInEmptyBlocks": true,
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "RotationMode": "BlockNormal"
+    },
+    "VariantRotation": "NESW",
+    "Support": {
+      "North": [
+        {}
+      ]
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "UseConnector"
+          }
+        ]
+      }
+    }
+  },
+  "Variant": true
+}

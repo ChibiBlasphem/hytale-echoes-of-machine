@@ -168,6 +168,17 @@ abstract class InstallDevAssetsTask : DefaultTask() {
             logger.lifecycle("Copied folder: Common")
         }
 
+        // val commonSourceFolder = resourcesSrc.resolve("Common")
+        // if (commonSourceFolder.exists() && commonSourceFolder.isDirectory) {
+        //     val commonTargetFolder = assetsDir.resolve("Common")
+        //     try {
+        //         Files.createSymbolicLink(commonTargetFolder.toPath(), commonSourceFolder.toPath())
+        //         logger.lifecycle("Symlinked folder: Common")
+        //     } catch (e: Exception) {
+        //         logger.warn("Could not symlink Common folder \n${e.message}")
+        //     }
+        // }
+
         val serverSourceFolder = resourcesSrc.resolve("Server")
         if (serverSourceFolder.exists() && serverSourceFolder.isDirectory) {
             val serverTargetFolder = assetsDir.resolve("Server")
