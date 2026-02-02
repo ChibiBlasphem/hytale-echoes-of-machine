@@ -22,39 +22,6 @@
       "Machine"
     ]
   },
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Ingredient_Tree_Sap",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Ingredient_Stick",
-        "Quantity": 1
-      }
-    ],
-    "OutputQuantity": 4,
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Categories": [
-          "Tools"
-        ],
-        "Id": "Fieldcraft"
-      },
-      {
-        "Id": "Workbench",
-        "Type": "Crafting",
-        "Categories": [
-          "Workbench_Survival"
-        ]
-      }
-    ]
-  },
   "ItemSoundSetId": "ISS_Blocks_Stone",
   "BlockType": {
     "DrawType": "Model",
