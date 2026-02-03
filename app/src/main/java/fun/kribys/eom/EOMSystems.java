@@ -80,6 +80,13 @@ public class EOMSystems {
                 info.markNeedsSaving();
             }
 
+            int worldX = ChunkUtil.worldCoordFromLocalCoord(wc.getX(), localX);
+            int worldZ = ChunkUtil.worldCoordFromLocalCoord(wc.getZ(), localZ);
+
+            wc.addKeepLoaded();
+            wc.setTicking(worldX, localY, worldZ, true);
+
+            // Try loading connected block chunk
             Vector3i targetBlockPos = connector.getTargetBlock();
             if (targetBlockPos == null) {
                 EOMPlugin.logger().atWarning().log("Couldn't find target position for '%s'", connector.getName());
@@ -87,17 +94,15 @@ public class EOMSystems {
             }
             
             long targetBlockChunkIndex = ChunkUtil.indexChunkFromBlock(targetBlockPos.x, targetBlockPos.z);
-            WorldChunk targetBlockWc = wc.getWorld().getChunk(targetBlockChunkIndex);
+            WorldChunk targetBlockWc = wc.getWorld().getChunkIfLoaded(targetBlockChunkIndex);
+            if (targetBlockWc == null) {
+                targetBlockWc = wc.getWorld().loadChunkIfInMemory(targetBlockChunkIndex);
+            }
             if (targetBlockWc == null) {
                 EOMPlugin.logger().atWarning().log("Couldn't find target block's chunk for '%s', it will remain deactivated", connector.getName());
                 return;
             }
-
-            int worldX = ChunkUtil.worldCoordFromLocalCoord(wc.getX(), localX);
-            int worldZ = ChunkUtil.worldCoordFromLocalCoord(wc.getZ(), localZ);
             
-            wc.addKeepLoaded();
-            wc.setTicking(worldX, localY, worldZ, true);
             targetBlockWc.addKeepLoaded();
         }
 
@@ -186,10 +191,10 @@ public class EOMSystems {
                     }
 
                     long targetBlockChunkIndex = ChunkUtil.indexChunkFromBlock(targetBlockPos.x, targetBlockPos.z);
-                    WorldChunk targetBlockWc = worldChunk.getWorld().getChunk(targetBlockChunkIndex);
+                    WorldChunk targetBlockWc = worldChunk.getWorld().getChunkIfLoaded(targetBlockChunkIndex);
                     if (targetBlockWc == null) {
-                        return BlockTickStrategy.IGNORED;
-                    }                   
+                        return BlockTickStrategy.CONTINUE;
+                    }
 
                     worldChunk.resetActiveTimer();
                     targetBlockWc.resetActiveTimer();
